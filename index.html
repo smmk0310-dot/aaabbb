@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#9177ee">
+  <meta name="description" content="16개의 엉뚱한 질문으로 알아보는 나만의 몬스터 성향 테스트, 몬BTI!">
+  <title>몬BTI | 내 안에 몬스터 산다!</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="background-decor" aria-hidden="true"><span>✦</span><span>✳</span><span>✦</span><span>✳</span></div>
+  <main class="app" id="app">
+    <header class="brand"><span class="brand-icon" aria-hidden="true">👾</span><span>몬<span class="brand-accent">BTI</span></span></header>
+
+    <section class="panel screen active" id="start-screen" aria-labelledby="start-title">
+      <div class="pill">🎭 웃기고 엉뚱한 몬스터 성향 테스트</div>
+      <div class="hero-art" aria-hidden="true"><div class="monster-cutout" style="--col:1;--row:0"><img src="assets/monster-atlas.png" alt=""></div><span class="hero-sparkle sparkle-one">✦</span><span class="hero-sparkle sparkle-two">✳</span></div>
+      <h1 id="start-title">내 안에<br><em>몬스터</em> 산다!</h1>
+      <p class="intro">넌 아직도 네가 인간인 줄 알아?<br>16개의 황당한 선택으로 네 진짜 본캐를 깨워봐!</p>
+      <div class="feature-row"><span>❓ 16문항</span><span>⏱️ 약 3분</span><span>🌈 16종 결과</span></div>
+      <button class="primary-btn" id="start-btn" type="button">내 안의 몬스터 깨우기 <span aria-hidden="true">→</span></button>
+      <p class="disclaimer">재미로 즐기는 비공식 성향 테스트이며 전문 심리검사가 아닙니다.</p>
+    </section>
+
+    <section class="panel screen" id="quiz-screen" aria-labelledby="question-title" hidden>
+      <div class="quiz-top"><span class="section-label">몬스터 탐색 중 🔍</span><span class="question-counter" id="question-counter">01 / 16</span></div>
+      <div class="progress" role="progressbar" id="progressbar" aria-label="테스트 진행률" aria-valuemin="0" aria-valuemax="16" aria-valuenow="0"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="question-emoji" id="question-emoji" aria-hidden="true">🛸</div>
+      <p class="question-kicker" id="question-kicker">상황 01</p>
+      <h2 id="question-title">질문</h2>
+      <div class="answers" id="answers"></div>
+      <div class="quiz-bottom"><button class="text-btn" type="button" id="back-btn">← 이전 질문</button><span>직감대로 골라봐! ✨</span></div>
+    </section>
+
+    <section class="panel screen result-panel" id="result-screen" aria-labelledby="result-name" hidden>
+      <div class="pill">🎉 몬스터 발견 완료!</div>
+      <div class="result-art"><div class="monster-cutout" id="result-art" aria-hidden="true"><img src="assets/monster-atlas.png" alt=""></div></div>
+      <p class="result-eyebrow">당신의 숨겨진 본캐는…</p>
+      <h2 id="result-name">몬스터 이름</h2>
+      <div class="type-badge"><span id="result-emoji" aria-hidden="true">👾</span> <span id="result-type">INFP</span></div>
+      <p class="result-description" id="result-description"></p>
+      <div class="result-note" id="result-note"></div>
+      <div class="result-actions"><button class="primary-btn" id="share-btn" type="button">🔗 결과 공유하기</button><button class="secondary-btn" id="restart-btn" type="button">↺ 다시 하기</button></div>
+      <p class="share-message" id="share-message" role="status" aria-live="polite"></p>
+      <p class="disclaimer">MBTI 공식 검사와 무관한 오락용 콘텐츠입니다.</p>
+    </section>
+
+    <footer>Made with 💜 for every weird little monster</footer>
+  </main>
+</body>
+</html>
